@@ -40,7 +40,7 @@ const Education = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground mb-4">
                 <GraduationCap className="h-4 w-4" />
-                <span>CGPA: 8.15/10</span>
+                <span>CGPA: 8.45/10</span>
               </div>
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2">
