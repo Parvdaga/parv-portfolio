@@ -22,10 +22,9 @@ const projects = [
     period: "Mar 2025 – Apr 2025",
     description: [
       "Built a real-time object detector with 95% accuracy, identifying objects by class and color.",
-"Integrated voice commands (Google Speech API) and text-to-speech feedback.",
-"Optimized YOLOv8 model to process 30 FPS with a confidence threshold of 0.5.",
-"Reduced false positives by 40% using multi-attribute verification
-",
+      "Integrated voice commands (Google Speech API) and text-to-speech feedback.",
+      "Optimized YOLOv8 model to process 30 FPS with a confidence threshold of 0.5.",
+      "Reduced false positives by 40% using multi-attribute verification",
     ],
     link: "https://github.com/Parvdaga/voice-controlled-object-detection",
   },
@@ -37,7 +36,7 @@ const projects = [
       "Developed ML-powered automation features and participated in blockchain integration efforts.",
       "Worked cross-functionally on frontend-backend synergy and deployment pipelines.",
     ],
-    link: "#",
+    link: "https://your-link-to-microtaskvault.com", // <-- FIX HERE
   },
   {
     title: "Plant Leaf Disease Detection (ML – CNN/SVM/RF)",
@@ -55,9 +54,9 @@ const projects = [
       "Used Linear Regression to predict solar radiation from weather datasets.",
       "Achieved 85% accuracy, applied data preprocessing and visualization with NumPy & Matplotlib.",
     ],
-    link: "#",
+    link: "https://your-link-to-solar-prediction.com", // <-- FIX HERE
   },
-]
+];
 
 const Projects = () => {
   return (
