@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { ArrowRight, Github, Linkedin, Mail, Phone } from "lucide-react"
 import { DownloadButton } from "./download-button"
+import Image from "next/image" // <-- 1. Import the Image component
 
 const Hero = () => {
   return (
@@ -65,9 +66,18 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex justify-center"
         >
+          {/* --- Start of Changes --- */}
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20">
-            <img src="/profile.jpg?height=320&width=320" alt="Parv Daga" className="object-cover w-full h-full" />
+            <Image
+              src="/profile.jpg"
+              alt="Parv Daga"
+              width={320}
+              height={320}
+              priority={true}
+              className="object-cover w-full h-full"
+            />
           </div>
+          {/* --- End of Changes --- */}
         </motion.div>
       </div>
     </section>
