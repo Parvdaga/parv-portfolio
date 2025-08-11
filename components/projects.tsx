@@ -15,11 +15,23 @@ const projects = [
       "Integrated WhatsApp API and email automation for real-time confirmations.",
       "Built admin dashboard and automated PDF invoice generation.",
     ],
-    link: "#",
+    link: "https://github.com/Parvdaga/payflow-nexus-manager",
+  },
+  {
+    title: "Smart Object Detector (YOLOv8 + Voice Control)",
+    period: "Mar 2025 – Apr 2025",
+    description: [
+      "Built a real-time object detector with 95% accuracy, identifying objects by class and color.",
+"Integrated voice commands (Google Speech API) and text-to-speech feedback.",
+"Optimized YOLOv8 model to process 30 FPS with a confidence threshold of 0.5.",
+"Reduced false positives by 40% using multi-attribute verification
+",
+    ],
+    link: "https://github.com/Parvdaga/voice-controlled-object-detection",
   },
   {
     title: "MicroTaskVault – AI-powered SaaS Platform",
-    period: "Ongoing",
+    period: "Oct 2024 – Apr 2025",
     description: [
       "Leading frontend using Next.js and Tailwind CSS, integrating Supabase for scalable backend.",
       "Developed ML-powered automation features and participated in blockchain integration efforts.",
@@ -34,7 +46,7 @@ const projects = [
       "Built and evaluated CNN, SVM, and Random Forest models to detect diseases in apple leaves.",
       "Achieved 90% accuracy, optimized model performance, and visualized metrics with Matplotlib.",
     ],
-    link: "#",
+    link: "https://github.com/Parvdaga/Instance-segmentation-for-plants-leaf-disease-detection",
   },
   {
     title: "Solar Radiation Prediction using Regression",
