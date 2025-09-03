@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "./mode-toggle"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Sparkles } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
 
 const Navbar = () => {
@@ -32,12 +32,13 @@ const Navbar = () => {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-200 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-background/80 backdrop-blur-xl shadow-lg border-b border-border/50" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          <a href="#" className="text-xl font-bold">
+        <div className="flex h-20 items-center justify-between">
+          <a href="#" className="flex items-center gap-2 text-2xl font-display font-bold gradient-text hover:scale-105 transition-transform duration-300">
+            <Sparkles className="h-6 w-6 text-primary animate-bounce-gentle" />
             Parv Daga
           </a>
 
@@ -54,9 +55,10 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm font-medium transition-colors hover:text-primary"
+                  className="text-sm font-semibold transition-all duration-300 hover:text-primary hover:scale-105 relative group"
                 >
                   {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
               <ModeToggle />
@@ -66,20 +68,25 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         {isMobile && isMenuOpen && (
-          <div className="absolute left-0 right-0 top-16 bg-background shadow-md z-50 py-4 px-4 border-t">
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute left-0 right-0 top-20 bg-background/95 backdrop-blur-xl shadow-xl z-50 py-6 px-4 border-t border-border/50 rounded-b-2xl"
+          >
             <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-sm font-medium py-2 transition-colors hover:text-primary"
+                  className="text-base font-semibold py-3 px-4 rounded-xl transition-all duration-300 hover:text-primary hover:bg-primary/10"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
             </nav>
-          </div>
+          </motion.div>
         )}
       </div>
     </header>

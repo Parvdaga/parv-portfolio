@@ -8,9 +8,9 @@ interface DownloadButtonProps extends ButtonProps {
 
 export function DownloadButton({ fileUrl, fileName, className, ...props }: DownloadButtonProps) {
   return (
-    <Button variant="outline" className={className} asChild {...props}>
+    <Button variant="outline" className={`group ${className}`} asChild {...props}>
       <a href={fileUrl} download={fileName}>
-        <Download className="mr-2 h-4 w-4" />
+        <Download className="mr-2 h-5 w-5 group-hover:animate-bounce-gentle" />
         Download Resume
       </a>
     </Button>
